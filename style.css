@@ -353,6 +353,7 @@ nav {
     display: flex;
     width: 90%;
     margin: 30px 0;
+    box-shadow: var(--dark-shadow);
 }
 
 .bigcontainer .card .imgBx {
