@@ -238,6 +238,7 @@ nav {
 }
 
 /* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */
+/* ****************************body1********************************** */
 /* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
 
 .distortion {
@@ -245,6 +246,8 @@ nav {
     height: 400px;
     box-shadow: var(--dark-shadow);
 }
+/* ####################### 3D flip Animation ############################################# */
+
 .container-hover {
     display: flex;
     flex-direction: column;
@@ -257,7 +260,6 @@ nav {
 /* .hover-image{
     width: 3rem;
 }  */
-
 .hover-effect{
     /* width: 1200px; */
     /* margin: 1.5rem auto; */
@@ -293,14 +295,15 @@ nav {
     transform-origin: bottom;
 }
 .hover-effect .card .face.face1 img {
- max-width: 30px;
+ max-width: 50px;
+ 
 }
 
 .hover-effect .card .face.face1 h3 {
-    margin: 5px 0 0;
+    margin: 5px 0 0 ;
     color: #fff;
     text-align: center;
-    font-size: 1.7rem;
+    font-size: 1.2rem;
 }
 
 .hover-effect .card:hover .face.face1 {
@@ -321,6 +324,113 @@ nav {
 .hover-effect .card:hover .face.face2 {
     transform: translateY(0%) rotateX(0deg);
 }
+
+/* ######################### Big to small hover animation **************************** */
+
+
+.bigbody {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #222;
+}
+
+.bigcontainer {
+    position: relative;
+    width: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+
+.bigcontainer .card {
+    position: relative;
+    height: 250px;
+    background: #fff;
+    display: flex;
+    width: 70%;
+    margin: 30px 0;
+}
+
+.bigcontainer .card .imgBx {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #333;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
+}
+
+.bigcontainer .card:hover .imgBx {
+    width: 100px;
+    height: 100px;
+    left: -50px;
+    /* background: transparent; */
+    top: calc(50% - 50px);
+    transition: 0.5s ease-in-out;
+    background: #ff0057;
+}
+
+.bigcontainer .card .imgBx:before {
+    content: attr(data-text);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 5rem;
+    color: rgba(255, 255, 255, 0.05);
+    font-weight: 700;
+}
+
+.bigcontainer .card .imgBx img {
+    max-width: 60px;
+    transition: 0.5s ease-in-out;
+}
+
+.bigcontainer .card:hover .imgBx img {
+    max-width: 40px;
+}
+
+.bigcontainer .card .content-big {
+    position: absolute;
+    right: 0;
+    width: calc(100% - 80px);
+    height: 100%;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.bigcontainer .card .content-big h3{
+    margin-bottom: 5px;
+    font-size: 1rem;
+}
+
+.bigcontainer .card .content-big a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 10px;
+    background: #333;
+    text-decoration: none;
+    color: #fff;
+}
+.bigcontainer .card .content-big a:hover {
+    color: aqua;
+    background: grey;
+    transition: 0.5s ease-in-out;
+} 
 
 }
 
@@ -631,6 +741,7 @@ main {
     background: honeydew;
     box-shadow: var(--light-shadow);
     transition: var(--transition);
+    z-index: 100;
 }
 
 .fixed-nav .nav-center {
@@ -708,7 +819,7 @@ main {
 .overide{
     background-color: blue;
 }
-
+/* ############### 3d flip animation card ################ */
 .container-hover {
     display: flex;
     justify-content: center;
@@ -783,5 +894,107 @@ main {
     transform: translateY(0%) rotateX(0deg);
 }
 
+/* ####################### Big to small hover animation ############################################# */
 
+.bigcontainer .card .imgBx img {
+    max-width: 100px;
+    transition: 0.5s ease-in-out;
+}
+.bigbody {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #222;
+}
+
+.bigcontainer {
+    position: relative;
+    width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+
+.bigcontainer .card {
+    position: relative;
+    height: 250px;
+    background: #fff;
+    display: flex;
+    width: 45%;
+    margin: 30px 0;
+}
+
+.bigcontainer .card .imgBx {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #333;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
+}
+
+.bigcontainer .card:hover .imgBx {
+    width: 150px;
+    height: 150px;
+    left: -75px;
+    /* background: transparent; */
+    top: calc(50% - 75px);
+    transition: 0.5s ease-in-out;
+    background: #ff0057;
+}
+
+.bigcontainer .card .imgBx:before {
+    content: attr(data-text);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 7rem;
+    color: rgba(255, 255, 255, 0.05);
+    font-weight: 700;
+}
+
+.bigcontainer .card:hover .imgBx img {
+    max-width: 80px;
+}
+
+.bigcontainer .card .content-big {
+    position: absolute;
+    right: 0;
+    width: calc(100% - 80px);
+    height: 100%;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.bigcontainer .card .content-big h3{
+    margin-bottom: 5px;
+    font-size: 2rem;
+}
+
+.bigcontainer .card .content-big a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 10px;
+    background: #333;
+    text-decoration: none;
+    color: #fff;
+}
+
+.bigcontainer .card .content-big a:hover {
+    color: aqua;
+    background: grey;
+    transition: 0.5s ease-in-out;
+} 
 }
