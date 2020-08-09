@@ -906,10 +906,7 @@ main {
 
 /* ####################### Big to small hover animation ############################################# */
 
-.bigcontainer .card .imgBx img {
-    max-width: 100px;
-    transition: 0.5s ease-in-out;
-}
+
 .bigbody {
     display: flex;
     justify-content: center;
@@ -975,9 +972,12 @@ main {
     color: rgba(255, 200, 50, 0.2);
     font-weight: 700;
 }
-
+.bigcontainer .card .imgBx img {
+    max-width: 150px;
+    transition: 0.5s ease-in-out;
+}
 .bigcontainer .card:hover .imgBx img {
-    max-width: 80px;
+    max-width: 100px;
 }
 
 .bigcontainer .card .content-big {
@@ -995,6 +995,16 @@ main {
 .bigcontainer .card .content-big h3{
     margin-bottom: 5px;
     font-size: 2rem;
+}
+
+.bigcontainer .card .content-big ul {
+    font-family: var(--ff-primary-p);
+    font-size: 0.7rem;
+    text-transform: capitalize;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    
 }
 
 .bigcontainer .card .content-big a {
@@ -1041,7 +1051,7 @@ a {
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     background: #f1f1f1;
-    margin-bottom: 2rem;
+    margin: 2rem 0;
 
 }
 
@@ -1050,7 +1060,8 @@ a {
 }
 
 .aos .card img {
-    height: 400px;
+    height: auto;
+    width: 100%;
 }
 
 .aos .card > div {
