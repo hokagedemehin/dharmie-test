@@ -2,6 +2,7 @@ const navToggle = document.querySelector('.nav-toggle');
 const linksContainer = document.querySelector('.links-container');
 const links = document.querySelector('.links')
 
+// ############### hamburger ########################
 navToggle.addEventListener('click', ()=>{
     const containerHeight = linksContainer.getBoundingClientRect().height;
     const linksHeight = links.getBoundingClientRect().height;
@@ -15,10 +16,13 @@ navToggle.addEventListener('click', ()=>{
     // linksContainer.classList.toggle('show-links');
 });
 
+// ################ Back to top ##########################
+// ################ fixed Nav bar ################
 const navBar = document.getElementById('nav');
 const topLink = document.querySelector('.top-link');
 
-window.addEventListener('scroll', ()=> {
+window.addEventListener('scroll', (e)=> {
+    e.preventDefault();
     const scrollHeight = window.pageYOffset;
     const navHeight = navBar.getBoundingClientRect().height;
 
