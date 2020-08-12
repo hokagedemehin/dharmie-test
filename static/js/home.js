@@ -149,3 +149,4 @@ prevBtn.addEventListener('click', ()=> {
     }
     reviewPerson(current);
 });
+

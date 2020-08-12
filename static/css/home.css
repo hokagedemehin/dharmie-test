@@ -101,7 +101,6 @@ h1 {
     font-family: var(--ff-primary-h1);
     color: var(--clr-primary);
 }
-
 .underline {
     height: 0.25rem;
     width: 5rem;
@@ -109,7 +108,6 @@ h1 {
     margin-right: auto;
     background-color: var(--clr-darkbrown-2)
 }
-
 .main {
     display: flex;
     flex-direction: column;
@@ -124,7 +122,6 @@ section{
     margin: 0 auto;
     padding: 0 4rem;
 }
-
 .top-link {
     font-size: 1.25rem;
     position: fixed;
@@ -141,7 +138,6 @@ section{
     visibility: hidden;
     z-index: -100;
 }
-
 @keyframes appear {
     0% {
         transform: scale(1);
@@ -159,10 +155,13 @@ section{
         transform: scale(1);
     }
 }
+p {
+    color: black;
+}
+
 .show-links {
     visibility: visible;
-    z-index: 1000;
-    
+    z-index: 1000;  
 }
 
 
@@ -456,9 +455,6 @@ nav {
 
 }
 
-p {
-    color: black;
-}
 
 
 
@@ -649,10 +645,16 @@ nav {
     nav /* complete container for the nav*/ {
         background: transparent;
     }
+    
+    main {
+        background-color: #FFF8DC
+    }
+    
+    /* Normal Nav with transparent background */
     .nav-center /* div holding image, hamburger and links*/ {
         width: 95%;
         margin: 0.5rem auto;
-        /* max-width: 850px; */
+        max-width: 1300px;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -663,6 +665,8 @@ nav {
     .nav-toggle {
         display: none;
     }
+    
+    /* Fixed Nav */
     .fixed-nav /* fixed nav to appear once you scroll to a point*/ {
         position: fixed;
         top: 0;
@@ -671,6 +675,7 @@ nav {
         background: honeydew;
         box-shadow: var(--light-shadow);
         transition: var(--transition);
+        z-index: 100;
     }
     
     .fixed-nav .nav-center {
@@ -678,7 +683,8 @@ nav {
         margin: 0.5rem auto;
     }
     .fixed-nav .links a  /* color of all links inside the fixed nav*/{
-        color: var(--clr-darkbrown-1);
+        /* color: var(--clr-darkbrown-1); */
+        color: #D2691E;
     }
     
     .fixed-nav .links a:hover /* hover color change */{
@@ -691,13 +697,13 @@ nav {
     .links-container {
         height: auto !important;
         /* this overights the else statement in the app.js after the if statement that checks if the containerheight is zero*/
- 
+    
     }
-
+    
     .links /* ul holding all the links */{
         display: flex;
     }
-
+    
     .links a /* each links inside the ul*/{
         background: transparent;
         color: var(--clr-darkbrown-1);
@@ -707,20 +713,562 @@ nav {
         margin: 0 0.7rem;
         padding: 0;
     }
-
+    
     .links a:hover {
-        color: var(--clr-lightbrown-1);
+        color: var(--clr-darkbrown-3);
     }
     .logo {
         border-radius: 50%;
-        width: 5rem;
+        width: 7rem;
     }
+    /* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */
     /* ****************************Body 1************************* */
+    /* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */
+    /* murf image */
     .content {
+        display: flex;
+        justify-content: space-between;
         width: 90%;
-        max-width: 900px;
+        max-width: 1200px;
         margin: 0 auto;
+        align-items: center;
+        padding-bottom: 1rem;
     }
+    
+    
+    .distortion {
+        width: 400px;
+        height: 300px;
+        box-shadow: var(--dark-shadow);
+    }
+    
+    .text{
+        font-size: 4rem;
+        font-weight: 800;
+        font-family: var(--ff-title-1);
+        color: var(--clr-primary);
+    }
+    
+    .mantra {
+        font-size: 2rem;
+        color: var(--clr-darkbrown-1);
+    }
+    
+    .overide{
+        background-color: blue;
+    }
+    /* ############### 3d flip animation card ############################################################## */
+    .container-hover {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #1e1e1e;
+        margin: 1rem 0 ;
+    }
+    
+    /* .hover-image{
+        width: 3rem;
+    }  */
+    
+    .hover-effect{
+        width: 1200px;
+        /* margin: 1.5rem auto; */
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        /* align-items: center; */
+    }
+    
+    .hover-effect .card {
+        position: relative;
+        width: 300px;
+        height: 200px;
+    }
+    
+    .hover-effect .card .face {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transition: 0.5s;
+    }
+    
+    .hover-effect .card .face.face1 {
+        background: #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+        transform-origin: bottom;
+    }
+    .hover-effect .card .face.face1 img {
+     max-width: 100px;
+    }
+    
+    .hover-effect .card .face.face1 h3 {
+        margin: 10px 0 0;
+        color: #fff;
+        text-align: center;
+        font-size: 1.7rem;
+    }
+    
+    .hover-effect .card:hover .face.face1 {
+        transform: translateY(-100%) rotateX(90deg);
+        background: #ff0057;
+    }
+    
+    .hover-effect .card .face.face2 {
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        transform-origin: top;
+        transform: translateY(100%) rotateX(90deg);
+    }
+    
+    .hover-effect .card:hover .face.face2 {
+        transform: translateY(0%) rotateX(0deg);
+    }
+    
+    /* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */
+    /* ####################### Big to small hover animation ############################################# */
+    /* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */
+    
+    
+    .bigbody {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #FFE296;
+    }
+    
+    .bigbody h1{
+        margin-top: 1.5rem;
+    }
+    
+    .bigbody .underline {
+        width: 10rem;
+        margin-top: 0.3rem;
+    }
+    .bigcontainer {
+        position: relative;
+        width: 1000px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin: 20px;
+    }
+    
+    .bigcontainer .card {
+        position: relative;
+        height: 250px;
+        background: #fff;
+        border-radius: 40px;
+        box-shadow: -6px -6px 20px rgba(255,226,150,1),
+                    6px 6px 20px rgba(0, 0, 0, 0.2);
+       
+        display: flex;
+        width: 45%;
+        margin: 30px 0;
+    }
+    
+    .bigcontainer .card .imgBx {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #FFE296;
+        border-radius: 40px;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        transition: 0.5s ease-in-out;
+    }
+    
+    .bigcontainer .card:hover .imgBx {
+        width: 150px;
+        height: 150px;
+        left: -75px;
+        /* background: transparent; */
+        top: calc(50% - 75px);
+        transition: 0.5s ease-in-out;
+        background: #F0B500 
+    }
+    
+    .bigcontainer .card .imgBx:before {
+        content: attr(data-text);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        font-size: 7rem;
+        color: rgba(255, 200, 50, 0.2);
+        font-weight: 700;
+        z-index: -5;
+    }
+    .bigcontainer .card .imgBx img {
+        max-width: 150px;
+        transition: 0.5s ease-in-out;
+    }
+    .bigcontainer .card:hover .imgBx img {
+        max-width: 100px;
+    }
+    
+    .bigcontainer .card .content-big {
+        position: absolute;
+        right: 0;
+        width: calc(100% - 80px);
+        height: 100%;
+        padding: 0 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+    }
+    
+    .bigcontainer .card .content-big h3{
+        margin-bottom: 5px;
+        font-size: 2rem;
+    }
+    
+    .bigcontainer .card .content-big ul {
+        font-family: var(--ff-primary-p);
+        font-size: 0.7rem;
+        text-transform: capitalize;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        
+    }
+    
+    .bigcontainer .card .content-big a {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 5px 10px;
+        background: #333;
+        text-decoration: none;
+        color: #fff;
+    }
+    
+    .bigcontainer .card .content-big a:hover {
+        color: aqua;
+        background: grey;
+        transition: 0.5s ease-in-out;
+    } 
+    
+    /* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */
+    /* Reviews ANimation */
+    /* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */
+    
+    .review-container .card img {
+        max-width: 300px;
+    }
+    
+    .details #job {
+        font-size: 1.2rem;
+        margin: 0.5rem 0;
+        font-weight: 700;
+    }
+    
+    .details h2 {
+        font-size: 1.5rem;
+    }
+    
+    .details h2 , .details p{
+        text-transform: capitalize;
+    }
+    
+    .about-underline{
+        margin-top: 0.2rem;
+        width: 10rem;
+    }
+    
+    .bodyreview {
+        /* background: #f2f2f2; */
+        background: transparent;
+    }
+    
+    .review-container{
+        max-width: 1100px;
+        margin: 0.5rem auto;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .review-container .card {
+        position: relative;
+        margin: 2rem 0;
+        width: 300px;
+        height: 400px;
+        background: #fff;
+        transform-style: preserve-3d;
+        transform: perspective(2000px);
+        transition: 1s;
+        box-shadow: inset 300px 0 50px rgba(0, 0, 0, 0.5);
+    }
+    
+    .review-container .card:hover {
+        z-index: 10;
+        transform: perspective(2000px) rotate(-10deg);
+        box-shadow: inset 20px 0 50px rgba(0, 0, 0, 0.5);
+    }
+    
+    .review-container .card .imgBx {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        border: 1px solid #000;
+        box-sizing: border-box;
+        transform-origin: left;
+        z-index: 2;
+        transition: 1s;
+    }
+    
+    .review-container .card:hover .imgBx {
+        
+        transform: rotateY(-135deg);
+        transition: 1s ease-in-out;
+    }
+    
+    .review-container .card .imgBx img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .review-container .card .details {
+        position: absolute;
+        top: 0;
+        left: 0;
+        box-sizing: border-box;
+        padding: 20px;
+    }
+    
+    .button-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .prev-btn, .next-btn {
+        color: var(--clr-primary);
+        font-size: 2rem;
+        background: transparent;
+        border-color: transparent;
+        margin: 0 1rem;
+        transition: var(--transition);
+        cursor: pointer;
+    }
+    
+    .prev-btn:hover, .next-btn:hover {
+        opacity: 0.8;
+    }
+    
+    /* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */
+    /* AOS Animate on sroll */
+    /* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */
+    .aosbody{
+        font-size: 1.3rem;
+        /* background: #f9f9f9; */
+        /* ../ - this goes one step out of a folder, so if you want to go three steps you will type ../../../ */
+        background-image: url('../../images/parfait-large1.jpg');
+        background-size: cover;
+        background-attachment: fixed;
+        /* background-color: gainsboro;
+        background-blend-mode: soft-light; */
+        
+    }
+    .aos h1 {
+        margin-top: 0.5rem;
+    }
+    a {
+        color: #333;
+        text-decoration: none;
+    }
+    
+    .aos {
+        max-width: 1500px;
+        margin: auto;
+        overflow: auto;
+        padding: 0 2rem;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+    }
+    
+     .aos .card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+     .aos .card {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        background: #f1f1f1;
+        margin: 2rem 0;
+        height: 50%;
+    
+    }
+    
+    .aos .card h3 {
+        margin-bottom: 2rem;
+    }
+    
+    /* .aos .card img {
+        height: auto;
+        width: 100%;
+    } */
+    
+    .aos .card > div {
+        padding: 2rem;
+    }
+    
+    .card:nth-child(even) img {
+        order: 2;
+    }
+    
+    .btn {
+        display: inline-block;
+        background: #000;
+        color: #fff;
+        padding: 0.8rem 1.8rem;
+        margin-top: 2rem;
+        cursor: pointer;
+    }
+    
+    .btn:hover {
+        opacity: 0.5;
+        transition: 0.5s linear;
+    }
+    
+    /* ############################################################################### */
+    /* Fotter */
+    /* ############################################################################### */
+    .main-footer .icons a {
+        color: #d3d3d3;
+    }
+    
+    .div-footer {
+        background: #303036;
+    }
+    .main-footer {
+        
+        width: 95%;
+        /* max-width: 100%; */
+        color: #d3d3d3;
+        display: flex;
+    }
+    
+    .main-footer .footer-container {
+        width: 40%;
+        margin: auto;
+        margin-top: 1rem;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        gap: 2rem;
+    }
+    
+    .main-footer .copy {
+        width: 30%;
+        margin: auto;
+        font-size: 1.1rem;
+    }
+    
+    .main-footer .icons{
+        width: 20%;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+    }
+    
+    .footer-container .box {
+        text-align: center;
+    }
+    
+    .footer-container .box .icon .fas {
+        font-size: 2rem;
+        cursor: pointer;
+    }
+    
+    .footer-container .box .icon h3, 
+    .footer-container .box .icon h4 {
+        position: relative;
+        font-weight: 200;
+        margin: 0;
+        padding: 0.5rem 0.4rem 0 0.4rem;
+        font-size: 1.3rem;
+        overflow: hidden;
+        transition-delay: 0.3333s;
+        color: transparent;
+    }
+    
+    .footer-container .box .fas:hover ~ h3,
+    .footer-container .box .fas:hover ~ h4 {
+        color: #d3d3d3;
+    }
+    
+    .footer-container .box .icon h4 {
+        font-weight: 700;
+        margin: 5px 0;
+        font-style: 30px;
+    }
+    
+    .footer-container .box .icon h3:before, 
+    .footer-container .box .icon h4:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 100%;
+        width: 95%;
+        height: 100%;
+        background-color: var(--clr-primary-1);
+        transition: 1.2s;
+    }
+    
+    .footer-container .box .icon h4:before {
+        left: initial;
+        right: 100%;
+        background-color: saddlebrown;
+    }
+    
+    .footer-container .box .fas:hover ~ h3:before
+     {
+        left: -100%;
+    }
+    
+    .footer-container .box .fas:hover ~ h4:before {
+        left: initial;
+        right: -100%;
+    }
+    
+    .footer-container .box .fas:hover ~ h3,
+    .footer-container .box .fas:hover ~ h4 {
+        color: #d3d3d3;
+    }
+    
+    .main-footer .copy p {
+        color: #d3d3d3;
+    }
+    
+
 }
 
 
@@ -845,7 +1393,7 @@ main {
 .overide{
     background-color: blue;
 }
-/* ############### 3d flip animation card ################ */
+/* ############### 3d flip animation card ############################################################## */
 .container-hover {
     display: flex;
     justify-content: center;
@@ -1085,7 +1633,7 @@ main {
 
 .review-container{
     max-width: 1100px;
-    margin: 0.5rem auto;
+    margin: 1.5rem auto;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -1096,6 +1644,7 @@ main {
 .review-container .card {
     position: relative;
     margin: 2rem 0;
+    margin-bottom: 1rem;
     width: 300px;
     height: 400px;
     background: #fff;
@@ -1156,6 +1705,7 @@ main {
     background: transparent;
     border-color: transparent;
     margin: 0 1rem;
+    margin-bottom: 1rem;
     transition: var(--transition);
     cursor: pointer;
 }
@@ -1164,9 +1714,9 @@ main {
     opacity: 0.8;
 }
 
-/* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */
+/* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */
 /* AOS Animate on sroll */
-/* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */
+/* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */
 .aosbody{
     font-size: 1.3rem;
     /* background: #f9f9f9; */
@@ -1356,49 +1906,5 @@ a {
     color: #d3d3d3;
 }
 
-
-/* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */
-/* Neumorphism */
-/* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */
-
-.neucontainer .card .imgBx img {
-    width: 100px;
 }
 
-.neubody {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* min-height: 100vh; */
-    background-color: #ebf5fc;
-}
-
-.neucontainer {
-    position: relative;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    width: 1100px;
-}
-
-.neucontainer .card {
-    width: 300px;
-    margin: 20px;
-    padding: 40px 30px;
-    background-color: #ebf5fc;
-    box-shadow: -6px -6px 20px rgba(255,255,255,1),
-                6px 6px 20px rgba(0, 0, 0, 0.1)
-
-
-}
-
-.neucontainer .card:hover {
-    box-shadow: inset -4px -4px 10px rgba(255,255,255,0.5),
-                inset 4px 4px 10px rgba(0, 0, 0, 0.1);
-
-    transform: scale(0.99);
-}
-
-
-}
