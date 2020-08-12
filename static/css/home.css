@@ -97,12 +97,25 @@ ul {
 a {
     text-decoration: none;
 }
+h1 {
+    font-family: var(--ff-primary-h1);
+    color: var(--clr-primary);
+}
+
+.underline {
+    height: 0.25rem;
+    width: 5rem;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--clr-darkbrown-2)
+}
 
 .main {
     display: flex;
     flex-direction: column;
     width: 95%;
     margin: 0 auto;
+    /* min-height: calc(100vh - 124px); */
 }
 section{
     display: flex;
@@ -796,7 +809,10 @@ main {
     border-radius: 50%;
     width: 7rem;
 }
+/* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */
 /* ****************************Body 1************************* */
+/* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */
+/* murf image */
 .content {
     display: flex;
     justify-content: space-between;
@@ -904,14 +920,26 @@ main {
     transform: translateY(0%) rotateX(0deg);
 }
 
+/* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */
 /* ####################### Big to small hover animation ############################################# */
+/* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */
 
 
 .bigbody {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background: #FFE296;
+}
+
+.bigbody h1{
+    margin-top: 1.5rem;
+}
+
+.bigbody .underline {
+    width: 10rem;
+    margin-top: 0.3rem;
 }
 .bigcontainer {
     position: relative;
@@ -942,8 +970,8 @@ main {
     width: 100%;
     height: 100%;
     background: #FFE296;
-     border-radius: 40px;
-                z-index: 1;
+    border-radius: 40px;
+    z-index: 1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -971,6 +999,7 @@ main {
     font-size: 7rem;
     color: rgba(255, 200, 50, 0.2);
     font-weight: 700;
+    z-index: -5;
 }
 .bigcontainer .card .imgBx img {
     max-width: 150px;
@@ -1022,28 +1051,156 @@ main {
     transition: 0.5s ease-in-out;
 } 
 
+/* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */
+/* Reviews ANimation */
+/* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */
+
+.review-container .card img {
+    max-width: 300px;
+}
+
+.details #job {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+    font-weight: 700;
+}
+
+.details h2 {
+    font-size: 1.5rem;
+}
+
+.details h2 , .details p{
+    text-transform: capitalize;
+}
+
+.about-underline{
+    margin-top: 0.2rem;
+    width: 10rem;
+}
+
+.bodyreview {
+    /* background: #f2f2f2; */
+    background: transparent;
+}
+
+.review-container{
+    max-width: 1100px;
+    margin: 0.5rem auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.review-container .card {
+    position: relative;
+    margin: 2rem 0;
+    width: 300px;
+    height: 400px;
+    background: #fff;
+    transform-style: preserve-3d;
+    transform: perspective(2000px);
+    transition: 1s;
+    box-shadow: inset 300px 0 50px rgba(0, 0, 0, 0.5);
+}
+
+.review-container .card:hover {
+    z-index: 10;
+    transform: perspective(2000px) rotate(-10deg);
+    box-shadow: inset 20px 0 50px rgba(0, 0, 0, 0.5);
+}
+
+.review-container .card .imgBx {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #000;
+    box-sizing: border-box;
+    transform-origin: left;
+    z-index: 2;
+    transition: 1s;
+}
+
+.review-container .card:hover .imgBx {
+    
+    transform: rotateY(-135deg);
+    transition: 1s ease-in-out;
+}
+
+.review-container .card .imgBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.review-container .card .details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.prev-btn, .next-btn {
+    color: var(--clr-primary);
+    font-size: 2rem;
+    background: transparent;
+    border-color: transparent;
+    margin: 0 1rem;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.prev-btn:hover, .next-btn:hover {
+    opacity: 0.8;
+}
+
 /* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */
 /* AOS Animate on sroll */
 /* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */
 .aosbody{
     font-size: 1.3rem;
-    background: #f9f9f9;
+    /* background: #f9f9f9; */
+    /* ../ - this goes one step out of a folder, so if you want to go three steps you will type ../../../ */
+    background-image: url('../../images/parfait-large1.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    /* background-color: gainsboro;
+    background-blend-mode: soft-light; */
+    
 }
-
+.aos h1 {
+    margin-top: 0.5rem;
+}
 a {
     color: #333;
     text-decoration: none;
 }
 
 .aos {
-    max-width: 1200px;
+    max-width: 1500px;
     margin: auto;
     overflow: auto;
     padding: 0 2rem;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
 }
 
  .aos .card img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
  .aos .card {
@@ -1052,6 +1209,7 @@ a {
     gap: 2rem;
     background: #f1f1f1;
     margin: 2rem 0;
+    height: 50%;
 
 }
 
@@ -1059,10 +1217,10 @@ a {
     margin-bottom: 2rem;
 }
 
-.aos .card img {
+/* .aos .card img {
     height: auto;
     width: 100%;
-}
+} */
 
 .aos .card > div {
     padding: 2rem;
@@ -1085,6 +1243,119 @@ a {
     opacity: 0.5;
     transition: 0.5s linear;
 }
+
+/* ############################################################################### */
+/* Fotter */
+/* ############################################################################### */
+.main-footer .icons a {
+    color: #d3d3d3;
+}
+
+.div-footer {
+    background: #303036;
+}
+.main-footer {
+    
+    width: 95%;
+    /* max-width: 100%; */
+    color: #d3d3d3;
+    display: flex;
+}
+
+.main-footer .footer-container {
+    width: 40%;
+    margin: auto;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 2rem;
+}
+
+.main-footer .copy {
+    width: 30%;
+    margin: auto;
+    font-size: 1.1rem;
+}
+
+.main-footer .icons{
+    width: 20%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.footer-container .box {
+    text-align: center;
+}
+
+.footer-container .box .icon .fas {
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.footer-container .box .icon h3, 
+.footer-container .box .icon h4 {
+    position: relative;
+    font-weight: 200;
+    margin: 0;
+    padding: 0.5rem 0.4rem 0 0.4rem;
+    font-size: 1.3rem;
+    overflow: hidden;
+    transition-delay: 0.3333s;
+    color: transparent;
+}
+
+.footer-container .box .fas:hover ~ h3,
+.footer-container .box .fas:hover ~ h4 {
+    color: #d3d3d3;
+}
+
+.footer-container .box .icon h4 {
+    font-weight: 700;
+    margin: 5px 0;
+    font-style: 30px;
+}
+
+.footer-container .box .icon h3:before, 
+.footer-container .box .icon h4:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 95%;
+    height: 100%;
+    background-color: var(--clr-primary-1);
+    transition: 1.2s;
+}
+
+.footer-container .box .icon h4:before {
+    left: initial;
+    right: 100%;
+    background-color: saddlebrown;
+}
+
+.footer-container .box .fas:hover ~ h3:before
+ {
+    left: -100%;
+}
+
+.footer-container .box .fas:hover ~ h4:before {
+    left: initial;
+    right: -100%;
+}
+
+.footer-container .box .fas:hover ~ h3,
+.footer-container .box .fas:hover ~ h4 {
+    color: #d3d3d3;
+}
+
+.main-footer .copy p {
+    color: #d3d3d3;
+}
+
 
 /* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */
 /* Neumorphism */
@@ -1128,4 +1399,6 @@ a {
 
     transform: scale(0.99);
 }
+
+
 }
