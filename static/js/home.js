@@ -16,6 +16,23 @@ navToggle.addEventListener('click', ()=>{
     // linksContainer.classList.toggle('show-links');
 });
 
+// ################### Line under links #########################
+var mark = document.querySelector('#marker');
+var itemLinks = document.querySelectorAll('.scroll-link');
+    
+function indicator(e) {
+    mark.style.left = `${e.offsetLeft}px`
+    mark.style.width = `${e.offsetWidth}px`;
+}
+
+itemLinks.forEach(links => {
+    links.addEventListener('click', (e) => {
+        indicator(e.target);
+        
+    });
+});
+
+
 // ################ Back to top ##########################
 // ################ fixed Nav bar ################
 const navBar = document.getElementById('nav');
