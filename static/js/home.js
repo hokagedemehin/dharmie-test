@@ -19,19 +19,27 @@ navToggle.addEventListener('click', ()=>{
 // ################### Line under links #########################
 var mark = document.querySelector('#marker');
 var itemLinks = document.querySelectorAll('.scroll-link');
-    
+var backTop = document.querySelector('.top-link');
+var home = document.querySelector('#nav-link');
+
 function indicator(e) {
     mark.style.left = `${e.offsetLeft}px`
     mark.style.width = `${e.offsetWidth}px`;
+    console.log(e.offsetLeft, e.offsetWidth );
 }
 
 itemLinks.forEach(links => {
     links.addEventListener('click', (e) => {
-        indicator(e.target);
-        
+        indicator(e.target);  
     });
 });
 
+backTop.addEventListener('click', (e) => {
+    var wid = home.getBoundingClientRect().width;
+    mark.style.left = `11px`;
+    mark.style.width = wid + 'px';
+    console.log(mark.style.left);
+})
 
 // ################ Back to top ##########################
 // ################ fixed Nav bar ################
