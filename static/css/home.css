@@ -279,9 +279,11 @@ main {
 /* %%%%%%%%%%%%%%%%%%%%%%% Murf %%%%%%%%%%%%%%%%%%%%%%%%%%% */
 .content {
     display: flex;
+    flex-direction: column;
+    height: 40vh;
     justify-content: space-between;
     /* gap: 9rem; */
-    width: 90%;
+    width: 100%;
     /* max-width: 270px; */
     margin: 0 auto;
     align-items: center;
@@ -291,19 +293,26 @@ main {
 
 
 .distortion {
-    width: 100px;
-    height: 50px;
+    width: 250px;
+    height: 200px;
     box-shadow: var(--dark-shadow);
     border: 3px blue solid;
     object-fit: cover;
 }
 
+.fluid-text {
+    border: 2px solid;
+    width: 90vw;
+    display: grid;
+    place-items: center;
+}
 .text{
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     font-weight: 400;
     font-family: var(--ff-title-1);
     color: var(--clr-primary);
     border: 2px red solid;
+    
 }
 
 .mantra {
@@ -311,11 +320,479 @@ main {
     color: var(--clr-darkbrown-1);
 }
 
+
 /* ######################### Big to small hover animation **************************** */
 
+.bigbody {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #FFE296;
+    /* border: 2px red solid; */
+}
+
+.bigbody h1{
+    margin-top: 1.5rem;
+}
+
+.bigbody .underline {
+    width: 10rem;
+    margin-top: 0.3rem;
+}
+.bigcontainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 95%;
+    max-width: 850px;
+    margin: 15px;
+    border: 2px red solid;
+}
+
+.bigcontainer .card {
+    position: relative;
+    height: 200px;
+    background: #fff;
+    border-radius: 40px;
+    box-shadow: -6px -6px 20px rgba(255,226,150,1),
+                6px 6px 20px rgba(0, 0, 0, 0.2);
+   
+    display: flex;
+    width: 80%;
+
+    margin: 30px 0;
+}
+
+.bigcontainer .card .imgBx {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #FFE296;
+    border-radius: 20px;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
+}
+
+.bigcontainer .card:hover .imgBx {
+    width: 80px;
+    height: 80px;
+    left: -30px;
+    /* background: transparent; */
+    top: calc(50% - 40px);
+    transition: 0.5s ease-in-out;
+    background: #F0B500 
+}
+
+.bigcontainer .card .imgBx:before {
+    content: attr(data-text);
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 2rem;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 3rem;
+    color: rgba(255, 200, 50, 0.2);
+    font-weight: 700;
+    z-index: -5;
+}
+.bigcontainer .card .imgBx img {
+    max-width: 80px;
+    transition: 0.5s ease-in-out;
+    /* border: 2px solid; */
+}
+.bigcontainer .card:hover .imgBx img {
+    max-width: 70px;
+    
+}
+
+.bigcontainer .card .content-big {
+    position: absolute;
+    /* position: relative; */
+    /* right: 10%; */
+    width: calc(100% - 5px);
+    height: 100%;
+    padding: 0 25%;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+
+}
+
+.bigcontainer .card .content-big h3{
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+}
+
+.bigcontainer .card .content-big ul {
+    font-family: var(--ff-primary-p);
+    font-size: 0.56em;
+    text-transform: capitalize;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.bigcontainer .card .content-big a {
+    display: inline-block;
+    margin-top: 5px;
+    padding: 5px 5px;
+    background: #333;
+    text-decoration: none;
+    color: #fff;
+}
+
+.bigcontainer .card .content-big a:hover {
+    color: aqua;
+    background: grey;
+    opacity: 0.5;
+    transition: 0.5s ease-in-out;
+} 
+
+/* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */
+    /* Reviews ANimation */
+    /* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */
+    
+    .review-container .card img {
+        max-width: 300px;
+    }
+    
+    .details #job {
+        font-size: 0.7rem;
+        margin: 0.5rem 0;
+        font-weight: 700;
+    }
+
+    .details #info {
+        font-size: 0.7rem;
+    }
+    
+    .details h2 {
+        font-size: 1rem;
+    }
+    
+    .details h2 , .details p{
+        text-transform: capitalize;
+    }
+    
+    .about-underline{
+        margin-top: 0.2rem;
+        width: 10rem;
+    }
+    
+    .bodyreview {
+        /* background: #f2f2f2; */
+        background: transparent;
+    }
+    
+    .review-container{
+        max-width: 1000px;
+        margin: 1.5rem auto;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .review-container .card {
+        position: relative;
+        margin: 1rem 0;
+        margin-bottom: 0rem;
+        width: 200px;
+        height: 300px;
+        background: #fff;
+        transform-style: preserve-3d;
+        transform: perspective(2000px);
+        transition: 1s;
+        box-shadow: inset 300px 0 50px rgba(0, 0, 0, 0.5);
+    }
+    
+    .review-container .card:hover {
+        z-index: 10;
+        transform: perspective(2000px) rotate(-10deg);
+        box-shadow: inset 20px 0 50px rgba(0, 0, 0, 0.5);
+    }
+    
+    .review-container .card .imgBx {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        border: 1px solid #000;
+        box-sizing: border-box;
+        transform-origin: left;
+        z-index: 2;
+        transition: 1s;
+    }
+    
+    .review-container .card:hover .imgBx {
+        
+        transform: rotateY(-135deg);
+        transition: 1s ease-in-out;
+    }
+    
+    .review-container .card .imgBx img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .review-container .card .details {
+        position: absolute;
+        top: 0;
+        left: 0;
+        box-sizing: border-box;
+        padding: 20px;
+    }
+    
+    .button-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .prev-btn, .next-btn {
+        color: var(--clr-primary);
+        font-size: 2rem;
+        background: transparent;
+        border-color: transparent;
+        margin: 0 1rem;
+        margin-bottom: 0.5rem;
+        transition: var(--transition);
+        cursor: pointer;
+    }
+    
+    .prev-btn:hover, .next-btn:hover {
+        opacity: 0.8;
+    }
+    
+    /* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */
+    /* AOS Animate on sroll */
+    /* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */
+    .aosbody{
+        /* font-size: 1rem; */
+        /* background: #f9f9f9; */
+        /* ../ - this goes one step out of a folder, so if you want to go three steps you will type ../../../ */
+        background-image: url('../../images/parfait-large1.jpg');
+        background-size: cover;
+        background-attachment: fixed;
+        /* background-color: gainsboro;
+        background-blend-mode: soft-light; */
+        
+    }
+    .aos h1 {
+        margin-top: 0.5rem;
+    }
+    a {
+        color: #333;
+        text-decoration: none;
+    }
+    
+    .aos {
+        max-width: 850px;
+        margin: auto;
+        overflow: auto;
+        padding: 0 2rem;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+    }
+    
+     .aos .card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+     .aos .card {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        background: #f1f1f1;
+        margin: 2rem 0;
+        height: 50%;
+    
+    }
+    
+    .aos .card h3 {
+        margin-bottom: 2rem;
+    }
+    
+    /* .aos .card img {
+        height: auto;
+        width: 100%;
+    } */
+    
+    .aos .card > div {
+        padding: 2rem;
+    }
+    
+    .card:nth-child(even) img {
+        order: 2;
+    }
+    
+    .btn {
+        display: inline-block;
+        background: #000;
+        color: #fff;
+        padding: 0.8rem 1.8rem;
+        margin-top: 2rem;
+        cursor: pointer;
+    }
+    
+    .btn:hover {
+        opacity: 0.5;
+        transition: 0.5s linear;
+    }
+    
+    /* ############################################################################### */
+    /* Fotter */
+    /* ############################################################################### */
+    .main-footer .icons a {
+        color: #d3d3d3;
+    }
+    
+    .div-footer {
+        background: #303036;
+        
+    }
+    .main-footer {
+        margin: 0 auto;
+        width: 100%;
+        /* max-width: 100%; */
+        color: #d3d3d3;
+        display: flex;
+        flex-wrap: wrap;
+        flex-basis: 80%;
+        justify-content: space-between;
+        /* border: 2px red solid; */
+        
+    }
+    
+    .main-footer .footer-container {
+        width: 100%;
+        margin: 0 auto;
+        padding: 1rem 0;
+        /* margin-top: 1rem; */
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        gap: 3rem;
+        /* border: 2px solid green; */
+        order: 2;
+    }
+    
+    .main-footer .copy {
+        width: 50%;
+        margin: 0 auto;
+        padding-top: 2rem;
+        padding-left: 1.5rem;
+        font-size: 1rem;
+        display: inline-flex;
+        /* justify-content: center;
+        align-items: center; */
+        /* border: 2px solid purple; */
+    }
+    
+    .main-footer .icons{
+        width: 50%;
+        margin: 0 auto;
+        /* margin-bottom: 1rem; */
+        padding-top: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+        font-size: 0.8rem;
+        /* border: 2px solid yellow; */
+    }
+    
+    .footer-container .box {
+        text-align: center;
+    }
+    
+    .footer-container .box .icon .fas {
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+    
+    .footer-container .box .icon h3, 
+    .footer-container .box .icon h4 {
+        position: relative;
+        font-weight: 200;
+        margin: 0;
+        padding: 0.5rem 0.4rem 0 0.4rem;
+        font-size: 1rem;
+        overflow: hidden;
+        transition-delay: 0.3333s;
+        color: transparent;
+    }
+    
+    .footer-container .box .fas:hover ~ h3,
+    .footer-container .box .fas:hover ~ h4 {
+        color: #d3d3d3;
+    }
+    
+    .footer-container .box .icon h4 {
+        font-weight: 700;
+        margin: 5px 0;
+        font-style: 30px;
+    }
+    
+    .footer-container .box .icon h3:before, 
+    .footer-container .box .icon h4:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 100%;
+        width: 95%;
+        height: 100%;
+        background-color: var(--clr-primary-1);
+        transition: 1.2s;
+    }
+    
+    .footer-container .box .icon h4:before {
+        left: initial;
+        right: 100%;
+        background-color: saddlebrown;
+    }
+    
+    .footer-container .box .fas:hover ~ h3:before
+     {
+        left: -100%;
+    }
+    
+    .footer-container .box .fas:hover ~ h4:before {
+        left: initial;
+        right: -100%;
+    }
+    
+    .footer-container .box .fas:hover ~ h3,
+    .footer-container .box .fas:hover ~ h4 {
+        color: #d3d3d3;
+    }
+    
+    .main-footer .copy p {
+        color: #d3d3d3;
+    }
+    
 
 
-
+}
 
 /* ############################################################ */
 /* ############################################################ */
