@@ -122,11 +122,11 @@ section{
     margin: 0 auto;
     padding: 0 4rem;
 }
-.top-link {
+ .top-link {
     font-size: 1.25rem;
     position: fixed;
     bottom: 3rem;
-    right: 3rem;
+    right: 2rem;
     background: var(--clr-primary-1);
     width: 2rem;
     height: 2rem;
@@ -207,7 +207,7 @@ nav {
     justify-content: space-between;
     width: 100%;
     margin: 1em auto;
-    border: solid 2px yellow;
+    /* border: solid 2px yellow; */
  }
 
 .fixed-nav .links a  /* color of all links inside the fixed nav*/{
@@ -288,7 +288,7 @@ main {
     margin: 0 auto;
     align-items: center;
     padding-bottom: 0.3rem;
-    border: solid 2px green;
+    /* border: solid 2px green; */
 }
 
 
@@ -296,13 +296,13 @@ main {
     width: 250px;
     height: 180px;
     box-shadow: var(--dark-shadow);
-    border: 3px blue solid;
+    /* border: 3px blue solid; */
     object-fit: cover;
     margin-bottom: 0.5rem;
 }
 
 .fluid-text {
-    border: 2px solid;
+    /* border: 2px solid; */
     width: 90vw;
     display: grid;
     place-items: center;
@@ -312,7 +312,7 @@ main {
     font-weight: 400;
     font-family: var(--ff-title-1);
     color: var(--clr-primary);
-    border: 2px red solid;
+    /* border: 2px red solid; */
     
 }
 
@@ -351,7 +351,7 @@ main {
     width: 95%;
     max-width: 850px;
     margin: 15px;
-    border: 2px red solid;
+    /* border: 2px red solid; */
 }
 
 .bigcontainer .card {
@@ -506,7 +506,7 @@ main {
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
-        border: 2px solid;
+        /* border: 2px solid; */
     }
     
     .review-container .card {
@@ -520,7 +520,7 @@ main {
         transform: perspective(2000px);
         transition: 1s;
         box-shadow: inset 300px 0 50px rgba(0, 0, 0, 0.5);
-        border: 2px red solid;
+        /* border: 2px red solid; */
     }
     
     .review-container .card:hover {
@@ -696,22 +696,29 @@ main {
         flex-wrap: wrap;
         /* flex-basis: 80%; */
         justify-content: space-between;
-        border: 2px white solid;
+        /* border: 2px white solid; */
         
     }
     
     .main-footer .footer-container {
-        width: 100%;
+        width: 70%;
         margin: 0 auto;
-        padding: 1rem 0;
+        /* padding: 1rem 0; */
         padding-bottom: 0;
         /* margin-top: 1rem; */
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-content: center;
-        gap: 3rem;
-        border: 2px solid green;
-        /* order: 2; */
+        
+        /* border: 2px solid green; */
+        
+    }
+    .footer-container .box {
+        text-align: center;
+        /* border: white 2px solid; */
+        margin: 0.5rem 0;
+        margin-bottom: 0;
     }
     
     .main-footer .copy {
@@ -723,7 +730,7 @@ main {
         display: flex;
         justify-content: center;
         align-items: center;
-        border: 2px solid purple;
+        /* border: 2px solid purple; */
     }
     
     .main-footer .icons{
@@ -736,12 +743,9 @@ main {
         align-items: center;
         gap: 3rem;
         font-size: 0.8rem;
-        border: 2px solid yellow;
+        /* border: 2px solid yellow; */
     }
     
-    .footer-container .box {
-        text-align: center;
-    }
     
     .footer-container .box .icon .fas {
         font-size: 1.5rem;
