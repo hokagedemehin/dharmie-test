@@ -280,7 +280,7 @@ main {
 .content {
     display: flex;
     flex-direction: column;
-    height: 45vh;
+    height: 40vh;
     justify-content: space-between;
     /* gap: 9rem; */
     width: 100%;
@@ -619,26 +619,27 @@ main {
     
      .aos .card img {
         width: 100%;
-        height: 50%;
+        height: 30vh;
         object-fit: cover;
     }
     
-     .aos .card {
+     /* .aos .card {
         display: grid;
-        /* grid-template-columns: repeat(1, 1fr); */
+        grid-template-columns: repeat(1, 1fr);
         grid-template-rows: repeat(3, 1fr);
-        /* gap: 1.5rem; */
+        gap: 1.5rem;
         background: #f1f1f1;
         margin: 2rem 0;
         height: auto;
     
-    }
+    } */
 
     .aos .card {
         display: flex;
         flex-direction: column;
         padding: 0.5rem 0;
         background: #f1f1f1;
+        margin: 1rem 0;
     }
 
     .aos .card > div {
@@ -649,10 +650,10 @@ main {
         margin-bottom: 2rem;
     }
     
-    .aos .card img {
+    /* .aos .card img {
         height: auto;
         width: 100%;
-    }
+    } */
     
     
     
@@ -691,10 +692,11 @@ main {
         /* max-width: 100%; */
         color: #d3d3d3;
         display: flex;
+        flex-direction: column;
         flex-wrap: wrap;
-        flex-basis: 80%;
+        /* flex-basis: 80%; */
         justify-content: space-between;
-        /* border: 2px red solid; */
+        border: 2px white solid;
         
     }
     
@@ -702,29 +704,30 @@ main {
         width: 100%;
         margin: 0 auto;
         padding: 1rem 0;
+        padding-bottom: 0;
         /* margin-top: 1rem; */
         display: flex;
         justify-content: center;
         align-content: center;
         gap: 3rem;
-        /* border: 2px solid green; */
-        order: 2;
+        border: 2px solid green;
+        /* order: 2; */
     }
     
     .main-footer .copy {
-        width: 50%;
+        width: 100%;
         margin: 0 auto;
-        padding-top: 2rem;
-        padding-left: 1.5rem;
+        padding-top: 1rem;
+        padding-left: 1rem;
         font-size: 1rem;
-        display: inline-flex;
-        /* justify-content: center;
-        align-items: center; */
-        /* border: 2px solid purple; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid purple;
     }
     
     .main-footer .icons{
-        width: 50%;
+        width: 100%;
         margin: 0 auto;
         /* margin-bottom: 1rem; */
         padding-top: 1rem;
@@ -733,7 +736,7 @@ main {
         align-items: center;
         gap: 3rem;
         font-size: 0.8rem;
-        /* border: 2px solid yellow; */
+        border: 2px solid yellow;
     }
     
     .footer-container .box {
