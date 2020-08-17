@@ -736,7 +736,7 @@ main {
     .main-footer .icons{
         width: 100%;
         margin: 0 auto;
-        /* margin-bottom: 1rem; */
+        margin-bottom: 0.5rem;
         padding-top: 1rem;
         display: flex;
         justify-content: center;
