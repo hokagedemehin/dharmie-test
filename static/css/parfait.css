@@ -230,6 +230,13 @@ p {
         /* transform: scale(1.5); */
     }
     
+    .fixed nav .scroll-link.active-link {
+        border-bottom: #D2691E 3px solid;
+        transition-property: border-bottom;
+        transition-timing-function: ease-in;
+        transition-duration: 0.5s;
+    }
+    
     
      .nav-toggle /* hamburger button*/{
         font-size: 1.5rem;
@@ -262,6 +269,7 @@ p {
         letter-spacing: var(--spacing);
         padding: 0.75rem 0;
         transition: var(--transition);
+        width: fit-content;
     }
     
     .links a:hover{
@@ -269,8 +277,12 @@ p {
         transition: var(--transition);
     }
 
-    .active-link {
-        color: gold;
+    
+    .scroll-link.active-link {
+        border-bottom: var(--clr-darkbrown-1) 3px solid;
+        transition-property: border-bottom;
+        transition-timing-function: ease-in;
+        transition-duration: 0.5s;
     }
     
     .logo /* logo in general*/ {
@@ -480,6 +492,12 @@ p {
         /* transform: scale(1.5); */
     }
     
+    .fixed nav .scroll-link.active-link {
+        border-bottom: #D2691E 3px solid;
+        transition-property: border-bottom;
+        transition-timing-function: ease-in;
+        transition-duration: 0.5s;
+    }
     
      .nav-toggle /* hamburger button*/{
         font-size: 1.5rem;
@@ -512,6 +530,14 @@ p {
         letter-spacing: var(--spacing);
         padding: 0.75rem 0;
         transition: var(--transition);
+        width: fit-content;
+    }
+    
+    .scroll-link.active-link {
+        border-bottom: var(--clr-darkbrown-1) 3px solid;
+        transition-property: border-bottom;
+        transition-timing-function: ease-in;
+        transition-duration: 0.5s;
     }
     
     .links a:hover{
@@ -741,7 +767,14 @@ p {
         /* transform: scale(1.5); */
     }
     
-    /* Fixed Nav */
+    .fixed nav .scroll-link.active-link {
+        border-bottom: #D2691E 3px solid;
+        transition-property: border-bottom;
+        transition-timing-function: ease-in;
+        transition-duration: 0.5s;
+    }
+   
+    
     
     .links-container {
         height: auto !important;
@@ -775,8 +808,12 @@ p {
         flex-direction: column;
     }
 
-    .active-link {
-        color: gold;
+     
+    .scroll-link.active-link {
+        border-bottom: var(--clr-darkbrown-1) 3px solid;
+        transition-property: border-bottom;
+        transition-timing-function: ease-in;
+        transition-duration: 0.5s;
     }
 
     .link_line #marker{
@@ -1007,6 +1044,16 @@ p {
         transform: scale(1.5); */
         transition: var(--transition);
     }
+
+    .fixed nav .scroll-link.active-link {
+        border-bottom: #D2691E 3px solid;
+        transition-property: border-bottom;
+        transition-timing-function: ease-in;
+        transition-duration: 0.5s;
+    }
+    
+    
+    
     .links-container {
         height: auto !important;
         /* this overights the else statement in the app.js after the if statement that checks if the containerheight is zero*/
@@ -1030,11 +1077,18 @@ p {
         letter-spacing: var(--spacing);
         margin: 0 0.7rem;
         padding: 0;
-        
+        width: fit-content;
     }
     
     .links a:hover {
         color: var(--clr-darkbrown-3);
+    }
+
+    .scroll-link.active-link {
+        border-bottom: var(--clr-darkbrown-1) 3px solid;
+        transition-property: border-bottom;
+        transition-timing-function: ease-in;
+        transition-duration: 0.5s;
     }
 
     .link_line {
@@ -1257,6 +1311,14 @@ main {
     transition: var(--transition);
 }
 
+.fixed nav .scroll-link.active-link {
+    border-bottom: #D2691E 3px solid;
+    transition-property: border-bottom;
+    transition-timing-function: ease-in;
+    transition-duration: 0.5s;
+}
+
+
 .link_line {
     position: relative;
     display: flex;
@@ -1280,15 +1342,16 @@ main {
     letter-spacing: var(--spacing);
     margin: 0 0.7rem;
     padding: 0;
+    width: fit-content;
     /* border-bottom: 4px solid yellow;
     transition: 4s; */
 }
 
 .scroll-link.active-link {
-    /* background-color: black;
-    color: gold; */
     border-bottom: var(--clr-darkbrown-1) 3px solid;
-    /* transition: ease-in 0.5s; */
+    transition-property: border-bottom;
+    transition-timing-function: ease-in;
+    transition-duration: 0.5s;
 }
 
 .link_line #marker{

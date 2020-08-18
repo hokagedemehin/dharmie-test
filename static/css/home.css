@@ -246,6 +246,19 @@ nav {
     /* transform: scale(1.5); */
 }
 
+.fixed nav .scroll-link.active-link {
+    border-bottom: #D2691E 3px solid;
+    transition-property: border-bottom;
+    transition-timing-function: ease-in;
+    transition-duration: 0.5s;
+}
+
+.scroll-link.active-link {
+    border-bottom: var(--clr-darkbrown-1) 3px solid;
+    transition-property: border-bottom;
+    transition-timing-function: ease-in;
+    transition-duration: 0.5s;
+}
 
  .nav-toggle /* hamburger button*/{
     font-size: 1.5rem;
@@ -283,6 +296,7 @@ nav {
     letter-spacing: var(--spacing);
     padding: 0.75rem 0;
     transition: var(--transition);
+    width: fit-content;
 }
 
 .links a:hover{
@@ -290,6 +304,12 @@ nav {
     transition: var(--transition);
 }
 
+.scroll-link.active-link {
+    border-bottom: var(--clr-darkbrown-1) 3px solid;
+    transition-property: border-bottom;
+    transition-timing-function: ease-in;
+    transition-duration: 0.5s;
+}
 
 main {
     background-color: #FFF8DC
@@ -894,7 +914,12 @@ nav {
     transition: var(--transition);
     /* transform: scale(1.5); */
 }
-
+.fixed nav .scroll-link.active-link {
+    border-bottom: #D2691E 3px solid;
+    transition-property: border-bottom;
+    transition-timing-function: ease-in;
+    transition-duration: 0.5s;
+}
 
  .nav-toggle /* hamburger button*/{
     font-size: 1.5rem;
@@ -932,6 +957,7 @@ nav {
     letter-spacing: var(--spacing);
     padding: 0.75rem 0;
     transition: var(--transition);
+    width: fit-content;
 }
 
 .links a:hover{
@@ -939,6 +965,12 @@ nav {
     transition: var(--transition);
 }
 
+.scroll-link.active-link {
+    border-bottom: var(--clr-darkbrown-1) 3px solid;
+    transition-property: border-bottom;
+    transition-timing-function: ease-in;
+    transition-duration: 0.5s;
+}
 
 main {
     background-color: #FFF8DC
@@ -1557,7 +1589,14 @@ main {
         /* transform: scale(1.5); */
     }
     
-    /* Fixed Nav */
+    .fixed nav .scroll-link.active-link {
+        border-bottom: #D2691E 3px solid;
+        transition-property: border-bottom;
+        transition-timing-function: ease-in;
+        transition-duration: 0.5s;
+    }
+    
+    
     
     .links-container {
         height: auto !important;
@@ -1577,20 +1616,24 @@ main {
         letter-spacing: var(--spacing);
         margin: 0 0.7rem;
         padding: 0;
-        
+        width: fit-content;
     }
 
     .links a:hover {
         color: var(--clr-darkbrown-3);
         transition: var(--transition);
     }
+
+    .scroll-link.active-link {
+        border-bottom: var(--clr-darkbrown-1) 3px solid;
+        transition-property: border-bottom;
+        transition-timing-function: ease-in;
+        transition-duration: 0.5s;
+    }
+
     .logo {
         border-radius: 50%;
         width: 4rem;
-    }
-
-    .active-link {
-        color: gold;
     }
 
     .link_line {
@@ -2197,6 +2240,15 @@ main {
         transform: scale(1.5); */
         transition: var(--transition);
     }
+
+    .fixed nav .scroll-link.active-link {
+        border-bottom: #D2691E 3px solid;
+        transition-property: border-bottom;
+        transition-timing-function: ease-in;
+        transition-duration: 0.5s;
+    }
+    
+    
     .links-container {
         height: auto !important;
         /* this overights the else statement in the app.js after the if statement that checks if the containerheight is zero*/
@@ -2216,20 +2268,24 @@ main {
         letter-spacing: var(--spacing);
         margin: 0 0.7rem;
         padding: 0;
-        
+        width: fit-content;
     }
     
     .links a:hover {
         color: var(--clr-darkbrown-3);
     }
 
+    .scroll-link.active-link {
+        border-bottom: var(--clr-darkbrown-1) 3px solid;
+        transition-property: border-bottom;
+        transition-timing-function: ease-in;
+        transition-duration: 0.5s;
+    }
+
     .link_line {
         position: relative;
         display: flex;
         flex-direction: column;
-    }
-    .active-link {
-        color: gold;
     }
 
     .link_line #marker{
@@ -2809,6 +2865,13 @@ main {
     color: #D2691E;
 }
 
+.fixed nav .scroll-link.active-link {
+    border-bottom: #D2691E 3px solid;
+    transition-property: border-bottom;
+    transition-timing-function: ease-in;
+    transition-duration: 0.5s;
+}
+
 .fixed-nav .links a:hover /* hover color change */{
     color: var(--clr-lightbrown-2);
     /* transition-timing-function: ease-in-out;
@@ -2842,6 +2905,7 @@ main {
     padding: 0;
     /* border-bottom: 4px solid yellow;
     transition: 4s; */
+    width: fit-content;
 }
 
 
@@ -2863,10 +2927,10 @@ main {
 }
 
 .scroll-link.active-link {
-    /* background-color: black;
-    color: gold; */
     border-bottom: var(--clr-darkbrown-1) 3px solid;
-    /* transition: ease-in 0.5s; */
+    transition-property: border-bottom;
+    transition-timing-function: ease-in;
+    transition-duration: 0.5s;
 }
 .logo {
     border-radius: 50%;
