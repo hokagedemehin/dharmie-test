@@ -38,9 +38,50 @@ backTop.addEventListener('click', (e) => {
     var wid = home.getBoundingClientRect().width;
     mark.style.left = `11px`;
     mark.style.width = wid + 'px';
-    console.log(mark.style.left);
-})
+    console.log(mark.style.width);
+});
 
+itemLinks.forEach(links => {
+    links.addEventListener('click', (e) => {
+        links.classList.toggle('active-link')  
+        // sidebar.classList.toggle('show-sidebar');
+    });
+});
+
+for (var i = 0; i < itemLinks.length; i++) {
+itemLinks[i].addEventListener("click", function() {
+      var current = document.getElementsByClassName("active");
+      current[0].className = current[0].className.replace(" active", "");
+      this.className += " active";
+    });
+  }
+
+  var btnContainer = document.querySelector("links");
+
+// Get all buttons with class="btn" inside the container
+var btns = btnContainer.getElementsByClassName("scroll-link");
+
+// Loop through the buttons and add the active class to the current/clicked button
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+
+// const questions = document.querySelectorAll('.question');
+// questions.forEach((ques) => {
+//     const btn = ques.querySelector('.question-btn');
+//     btn.addEventListener('click', ()=>{
+//         questions.forEach((item) => {
+//             if(item != ques){
+//                 item.classList.remove('show-text');
+//             }
+//         });
+//         ques.classList.toggle('show-text');
+//     });
+// });
 // ################ Back to top ##########################
 // ################ fixed Nav bar ################
 const navBar = document.getElementById('nav');

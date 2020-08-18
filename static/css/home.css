@@ -136,9 +136,27 @@ section{
     place-items: center;
     border-radius: 0.5rem;
     color: white;
-    animation: appear 4s linear 2s;
+    -webkit-animation: appear 4s linear 2s;
+            animation: appear 4s linear 2s;
     visibility: hidden;
     z-index: -100;
+}
+@-webkit-keyframes appear {
+    0% {
+        transform: scale(1);
+    }
+    25%{
+        transform: scale(1.25);
+    }
+    50%{
+        transform: scale(1.5);
+    }
+    75%{
+        transform: scale(1.25);
+    }
+    100%{
+        transform: scale(1);
+    }
 }
 @keyframes appear {
     0% {
@@ -300,7 +318,8 @@ main {
     height: 180px;
     box-shadow: var(--dark-shadow);
     /* border: 3px blue solid; */
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     margin-bottom: 0.5rem;
 }
 
@@ -555,7 +574,8 @@ main {
         left: 0;
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        -o-object-fit: cover;
+           object-fit: cover;
     }
     
     .review-container .card .details {
@@ -623,7 +643,8 @@ main {
      .aos .card img {
         width: 100%;
         height: 30vh;
-        object-fit: cover;
+        -o-object-fit: cover;
+           object-fit: cover;
     }
     
      /* .aos .card {
@@ -827,6 +848,7 @@ main {
 @media (min-width: 576px) and (max-width:767.98px) {
 body{
     background-color: purple;
+    background-color: var(--clr-body);
     /* background-image: url(images/parfait1.jpg);
     background-repeat: no-repeat;
     background-size: contain;
@@ -945,7 +967,8 @@ main {
     height: 180px;
     box-shadow: var(--dark-shadow);
     /* border: 3px blue solid; */
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     margin-bottom: 0.5rem;
 }
 
@@ -1200,7 +1223,8 @@ main {
         left: 0;
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        -o-object-fit: cover;
+           object-fit: cover;
     }
     
     .review-container .card .details {
@@ -1268,7 +1292,8 @@ main {
      .aos .card img {
         width: 100%;
         height: 30vh;
-        object-fit: cover;
+        -o-object-fit: cover;
+           object-fit: cover;
     }
     
      /* .aos .card {
@@ -1564,6 +1589,10 @@ main {
         width: 4rem;
     }
 
+    .active-link {
+        color: gold;
+    }
+
     .link_line {
         position: relative;
         display: flex;
@@ -1609,7 +1638,8 @@ main {
         height: 200px;
         box-shadow: var(--dark-shadow);
         /* border: 3px blue solid; */
-        object-fit: cover;
+        -o-object-fit: cover;
+           object-fit: cover;
         /* margin-top: 1rem;
         padding-top: 1rem; */
     }
@@ -1852,7 +1882,8 @@ main {
         left: 0;
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        -o-object-fit: cover;
+           object-fit: cover;
     }
     
     .review-container .card .details {
@@ -1919,7 +1950,8 @@ main {
      .aos .card img {
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        -o-object-fit: cover;
+           object-fit: cover;
     }
     
      .aos .card {
@@ -2107,6 +2139,7 @@ main {
         /* background-color: yellow; */
         background-color: var(--clr-body);
         /* background-color: #FFF8DC; */
+        /* background-color: yellow; */
     }
     h1 {
         font-size: 1.8rem;
@@ -2195,6 +2228,9 @@ main {
         display: flex;
         flex-direction: column;
     }
+    .active-link {
+        color: gold;
+    }
 
     .link_line #marker{
         position: absolute;
@@ -2210,7 +2246,7 @@ main {
     
     .logo {
         border-radius: 50%;
-        width: 7rem;
+        width: 5rem;
     }
     /* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */
     /* ****************************Body 1************************* */
@@ -2233,7 +2269,8 @@ main {
         height: 300px;
         box-shadow: var(--dark-shadow);
         /* border: 3px blue solid; */
-        object-fit: cover;
+        -o-object-fit: cover;
+           object-fit: cover;
         /* margin-top: 1rem;
         padding-top: 1rem; */
     }
@@ -2477,7 +2514,8 @@ main {
         left: 0;
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        -o-object-fit: cover;
+           object-fit: cover;
     }
     
     .review-container .card .details {
@@ -2544,7 +2582,8 @@ main {
      .aos .card img {
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        -o-object-fit: cover;
+           object-fit: cover;
     }
     
      .aos .card {
@@ -2822,9 +2861,16 @@ main {
 .links a:hover {
     color: var(--clr-darkbrown-3);
 }
+
+.scroll-link.active-link {
+    /* background-color: black;
+    color: gold; */
+    border-bottom: var(--clr-darkbrown-1) 3px solid;
+    /* transition: ease-in 0.5s; */
+}
 .logo {
     border-radius: 50%;
-    width: 7rem;
+    width: 5rem;
 }
 /* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */
 /* ****************************Body 1************************* */
@@ -3078,7 +3124,8 @@ main {
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
 }
 
 .review-container .card .details {
@@ -3145,7 +3192,8 @@ a {
  .aos .card img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
 }
 
  .aos .card {
