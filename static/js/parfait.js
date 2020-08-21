@@ -81,10 +81,12 @@ date.innerHTML = new Date().getFullYear();
 
 // Sticky Footer at the bottom
 const mainPage = document.querySelector('.main');
-// const mainPage2 = document.getElementById('main');
+const mainPage2 = document.getElementById('main');
 const footer = document.querySelector('.div-footer')
 
 const footHeight = footer.getBoundingClientRect().height;
+mainPage.style.minHeight = window.innerHeight - footHeight + 'px';
+
 // console.log(mainPage);
 // console.log(footer);
 // console.log(footHeight);
@@ -94,7 +96,6 @@ const footHeight = footer.getBoundingClientRect().height;
 // console.log(window.outerHeight - footHeight +'px');
 // console.log(window.innerHeight - footHeight +'px');
 // mainPage.style.minHeight = ` ${footHeight}`;
-mainPage.style.minHeight = window.innerHeight - footHeight + 'px';
 // console.log(mainPage.style.height);
 // const navHeight = navbar.getBoundingClientRect().height;
 // linksContainer.style.height = `${linksHeight}px`;

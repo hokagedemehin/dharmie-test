@@ -1119,6 +1119,8 @@ p {
     }
 
     
+
+    
     /* ############################################################################### */
     /* Fotter */
     /* ############################################################################### */
@@ -1375,9 +1377,69 @@ main {
     width: 6rem;
 }
 
-main {
-    background-color: #FFF8DC
-}
+/* ####################################################################################### */
+    /* Sticky images with scroll details */
+    /* ############################################################################################# */
+    .stickyBody {
+        
+    }
+    
+    .stickyBody .banner{
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        background-image: url(../../images/parfait-large1.jpg);
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    .sticky-section:nth-child(odd){
+        position: relative;
+        height: auto;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .sticky-section:nth-child(even){
+        position: relative;
+        height: auto;
+        display: flex;
+        /* flex-direction: row-reverse; */
+    }
+
+    .sticky-imgBx {
+        position: sticky;
+        top: 0;
+        min-width: 50%;
+        height: 100vh;
+    }
+
+    .sticky-imgBx img{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 600px;
+        -webkit-box-reflect: below -10px linear-gradient(transparent, transparent, #FFF8DC);
+    }
+
+    .sticky-section:nth-child(odd) .sticky-content{
+        padding: 100px 0 100px 100px;
+        text-align: right;
+    }
+    .sticky-section:nth-child(even) .sticky-content {
+        padding: 100px 100px 100px 0;
+        text-align: left;
+    }
+    .sticky-section .sticky-content h2 {
+        margin: 0 0 20px;
+        font-size: 4rem;
+    }
+
+    .sticky-section .sticky-content p {
+        color: #777;
+        font-size: 2rem;
+    }
 
 /* ############################################################################### */
 /* Fotter */
